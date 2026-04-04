@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name= 'author' content="Seth Martin">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name = 'description' content= ' Monomuse website redesign project'>
+
+    <title>Purchase Tickets - Monomuse</title>
+</head>
+<body>
+    <header>
+    <h1>Monomuse</h1>
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="views/explore.html">Explore</a>
+    <a href="views/exhibitions.html">Exhibitions</a>
+    <a href="views/tickets.html">Buy Tickets</a>
+    <a href="views/checkout.html">Checkout</a>
+    </nav>
+    </header>
+    <div class="main">
+    <p>
+    </p>Welcome to the ticket purchasing page for Monomuse! We are excited to offer you the opportunity to experience our unique and immersive museum. Please select the type of ticket you would like to purchase and follow the prompts to complete your transaction.
+
+    </h2> 
+    <h2> Buy Tickets!</h2>
+    </div>
+    
+    <article>
+        <form action="checkout.html" method="post">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+        <br><br>
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+        <br><br>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="ticket-type">Select Ticket Type:</label>
+            <select id="ticket-type" name="ticket-type">
+                <option value="general">General Admission - $15</option>
+                <option value="student">Student Admission - $10</option>
+                <option value="senior">Senior Admission - $12</option>
+            </select>
+            <br><br>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+            <br><br>
+            <input type="submit" value="Proceed to Checkout">
+    </article>
+</body>
+</html>
