@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav_bar"
+        "main"
+        "footer";
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+    padding: 18px 20px 8px 20px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    position: relative;
+    background-image:
+        url("../images/Fierce dragon and book logo.png"),
+        url("../images/dragon.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 30px -40px, right 40px center;
+    background-size: 140px auto, 110px auto;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 50px;
+    font-family: 'Cinzel Decorative', serif;
+}
+
+.header::before,
+.header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-image: url("../images/flowers-for-frame-and-border-black-and-white-clipart.png");
+    background-repeat: repeat-x;
+    background-size: 50px 30px;
+    pointer-events: none;
+}
+
+.header::before {
+    top: -15px;
+}
+
+.header::after {
+    bottom: -15px;
+}
+
+.nav_bar {
+    grid-area: nav_bar;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 10px 20px 20px 20px;
+    flex-wrap: wrap;
+}
+
+.nav_bar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border: 1.5px solid white;
+    border-radius: 22px;
+    transition: 0.3s;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.nav_bar a:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 15px white;
+}
+
+.active {
+    background-color: white;
+    color: black !important;
+    box-shadow: 0 0 15px white;
+}
+
+.main {
+    grid-area: main;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px 20px 30px 20px;
+    text-align: center;
+}
+
+.main h2 {
+    color: white;
+    margin-bottom: 18px;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 28px;
+}
+
+.main p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.main img {
+    width: 60%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 20px auto;
+}
+
+.buttonclicker,
+input[type="submit"] {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 22px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.buttonclicker:hover,
+input[type="submit"]:hover {
+    box-shadow: 0 0 15px white;
+    background-color: #ddd;
+}
+
+form {
+    max-width: 450px;
+    margin: 25px auto;
+    text-align: left;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid white;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 16px;
+    margin-top: 20px;
+    border-top: 1px solid white;
+    color: #ccc;
+    font-size: 14px;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    color: black;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid white;
+}
+
+tr:nth-child(even) {
+    background-color: #222;
+}
+#longIntro {
+    display: none;
+}
+
+#readLess {
+    display: none;
+}
+
+#purchase-form {
+    display: none;
+}
+.checkout-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.checkout-summary,
+.payment-box {
+    width: 420px;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: #111;
+}
+
+.checkout-summary label,
+.payment-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.checkout-summary input,
+.checkout-summary select,
+.payment-box input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+}
+
+.payment-box button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.main {
+    align-items: flex-start;
+}
