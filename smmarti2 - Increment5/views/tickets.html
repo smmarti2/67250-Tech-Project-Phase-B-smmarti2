@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='author' content="Seth Martin">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name='description' content='Monomuse website redesign project'>
+    <link rel="stylesheet" href="../static/style/style.css">
+    <script src="../static/style/script.js"></script>
+
+    <title>Purchase Tickets - Monomuse</title>
+</head>
+
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <h1>Purchase Tickets</h1>
+        </header>
+
+    <nav class="nav_bar" id="myNav">
+    <a href="../index.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a href="exhibitions.html">Exhibitions</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleNav()">☰</a>
+    </nav>
+
+        <main class="main">
+            <p>
+                Welcome to the ticket purchasing page for Monomuse! We are excited to offer you the opportunity to experience our unique and immersive museum. Please select the type of ticket you would like to purchase and follow the prompts to complete your transaction.
+            </p>
+
+            <h2>Buy Tickets!</h2>
+
+            <article>
+                <table>
+                    <tr>
+                        <th>Ticket Type</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>General Admission</td>
+                        <td>$15</td>
+                    </tr>
+                    <tr>
+                        <td>Student Admission</td>
+                        <td>$10</td>
+                    </tr>
+                    <tr>
+                        <td>Senior Admission</td>
+                        <td>$12</td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Availability</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>April 12, 2026</td>
+                        <td>Available</td>
+                        <td><button type="button" onclick="showPurchaseForm('April 12, 2026')">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>April 19, 2026</td>
+                        <td>Available</td>
+                        <td><button type="button" onclick="showPurchaseForm('April 19, 2026')">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>April 26, 2026</td>
+                        <td>Available</td>
+                        <td><button type="button" onclick="showPurchaseForm('April 26, 2026')">Buy Now</button></td>
+                    </tr>
+                </table>
+
+                <form id="purchase-form" action="#" method="post">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                    <br><br>
+
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                    <br><br>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br><br>
+
+                    <label for="ticket-type">Select Ticket Type:</label>
+                    <select id="ticket-type" name="ticket-type">
+                        <option value="general">General Admission - $15</option>
+                        <option value="student">Student Admission - $10</option>
+                        <option value="senior">Senior Admission - $12</option>
+                    </select>
+                    <br><br>
+
+                    <label for="quantity">Number of Tickets:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
+                    <br><br>
+
+                    <label for="selected-date">Selected Date:</label>
+                    <input type="text" id="selected-date" name="selected-date" readonly>
+                    <br><br>
+                    <button type="submit" onclick="submitPurchase(event)">Proceed to Checkout</button>
+                </form>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+    <script>
+        const form = document.getElementById("purchase-form");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Redirecting to payment system.");
+    window.location.href = "checkout.html";
+  });
+</script>
+</body>
+</html>
