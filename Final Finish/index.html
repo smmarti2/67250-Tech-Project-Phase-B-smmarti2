@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Seth Martin">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Monomuse website redesign project">
+    <link rel="stylesheet" href="./static/style/style.css">
+    <title>Monomuse</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="./static/style/script.js"></script>
+</head>
+
+<body onload="addYear();  loadMap()"></body>
+    <div class="container">
+
+        <header class="header">
+            <h1>Monomuse</h1>
+        </header>
+
+    <nav class="nav_bar" id="myNav">
+    <a href="views/explore.html">Explore</a>
+    <a href="views/exhibitions.html">Exhibitions</a>
+    <a href="views/tickets.html" class="buy-tickets-link">Buy Tickets</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleNav()">☰</a>
+    </nav>
+
+        <main class="main">
+            <h2 id="greeting">Welcome to the MonoMuse Museum</h2>
+
+            <img src="./static/images/monomuse Image Apr 2, 2026, 02_02_45 AM.png"
+                 alt="Monomuse at night">
+
+            <p>
+                MonoMuse is a contemporary museum dedicated to exploring the world of books and storytelling, and how they shape human creativity and culture. Through immersive exhibitions, interactive displays, and rotating collections, MonoMuse invites visitors to discover the power of literature—from classic works to modern voices—and how stories influence the way we think, imagine, and connect. Whether you are a first-time visitor or a returning guest, our exhibitions offer fresh perspectives on the impact of books in everyday life. Plan your visit to experience engaging literary exhibits, hands-on activities, and events designed to inspire a love for reading and storytelling.
+            </p>
+            <div id="map"></div>
+
+            <a href="views/tickets.html" class="buttonclicker">Buy Tickets</a>
+
+            <p id="shortIntro">
+                MonoMuse brings visitors into a world of books, storytelling, and imagination through immersive exhibits and literary experiences.
+            </p>
+
+            <p id="longIntro">
+                At MonoMuse, we go beyond simply displaying books. Our exhibits are designed to help visitors experience literature in new ways through interactive environments, themed collections, and creative installations. From timeless classics to modern works, we celebrate the stories that shape culture, inspire curiosity, and connect people across generations.
+            </p>
+
+            <button id="readMore">Read More</button>
+            <button id="readLess">Read Less</button>
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear"></p>
+            <p>All Images created by A.I </p>
+        </footer>
+
+    </div>
+</body>
+</html>

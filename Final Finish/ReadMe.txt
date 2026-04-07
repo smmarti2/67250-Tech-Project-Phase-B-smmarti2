@@ -1,0 +1,1 @@
+To access the checkout page you have to go through tickets 
